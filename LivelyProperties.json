@@ -1,0 +1,89 @@
+{
+  "warpRatio": {
+    "text": "Warp Ratio",
+    "type": "slider",
+    "min": 0,
+    "max": 1,
+    "step": 0.01,
+    "value": 0.4
+  },
+  "warpSize": {
+    "text": "Warp Size",
+    "type": "slider",
+    "min": 0,
+    "max": 1,
+    "step": 0.01,
+    "value": 0.4
+  },
+  "noiseRatio": {
+    "text": "Noise",
+    "type": "slider",
+    "min": 0,
+    "max": 1,
+    "step": 0.01,
+    "value": 0.08
+  },
+  "gradientType": {
+    "text": "Gradient",
+    "type": "dropdown",
+    "value": 1,
+    "items": [
+      "Simple",
+      "Soft Bézier",
+      "Mesh Static",
+      "Mesh Grid",
+      "Sharp Bézier"
+    ]
+  },
+  "warpShapeType": {
+    "text": "Warp Shape",
+    "type": "dropdown",
+    "value": 0,
+    "items": [
+      "Simplex Noise",
+      "Circular",
+      "Value Noise",
+      "Worley Noise",
+      "FBM Noise",
+      "Voronoi Noise",
+      "Domain Warping",
+      "Waves",
+      "Smooth Noise"
+    ]
+  },
+  "dayTextSize": {
+    "text": "Day Text Size",
+    "type": "slider",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "value": 70
+  },
+  "dateTextSize": {
+    "text": "Date Text Size",
+    "type": "slider",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "value": 20
+  },
+  "dateFormat": {
+    "text": "Date Format",
+    "type": "textbox",
+    "value": "do MMMM yyyy"
+  },
+  "clockTextSize": {
+    "text": "Clock Text Size",
+    "type": "slider",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "value": 15
+  },
+  "clockFormat": {
+    "text": "Clock Format",
+    "description": "Note: 'hh:mm a' for 12-hour format, 'HH:mm' for 24-hour format",
+    "type": "textbox",
+    "value": "HH:MM"
+  }
+}

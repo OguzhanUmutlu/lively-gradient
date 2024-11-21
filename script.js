@@ -21,25 +21,79 @@ const colorSchemes = [
     ["#0F2F65", "#E687D8", "#347BD1", "#6890E2", "#07265C", "#A88BDF"]
 ].map(i => i.map(hexToRgb));
 
+const dayDiv = document.querySelector(".day");
+const dateDiv = document.querySelector(".date")
+const clockDiv = document.querySelector(".clock");
+
+function updateTime() {
+    const date = new Date();
+    const day = date.getDay();
+
+    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    dayDiv.textContent = dayNames[day].toUpperCase();
+    dateDiv.textContent = dateFns.format(date, dateFormat);
+    clockDiv.textContent = dateFns.format(date, clockFormat);
+}
+
+addEventListener("dblclick", () => location.reload());
+
 let schemeIndex = 0;
 let completion = 0;
 
 const colors = colorSchemes[0];
 
-const warpRatio = 0.4;
-const warpSize = 0.4;
-const noiseRatio = 0; // 0.08 is a fair noise, but imo no noise is good
+let dateFormat = "do MMMM yyyy";
+let clockFormat = "HH:MM";
+let warpRatio = 0.4;
+let warpSize = 0.4;
+let noiseRatio = 0; // 0.08 is a fair noise, but imo no noise is good
 const numberPoints = colorSchemes[0].length;
 const randomNumber = 0;
-const gradientTypeIndex = 1;
-const warpShapeIndex = 0;
+let gradientTypeIndex = 1;
+let warpShapeIndex = 0;
 
 let theShader;
 let positionsUniforms = [];
 let points = [];
 
+function livelyPropertyListener(name, val) {
+    switch (name) {
+        case "warpRatio":
+            warpRatio = val;
+            break;
+        case "warpSize":
+            warpSize = val;
+            break;
+        case "noiseRatio":
+            noiseRatio = val;
+            break;
+        case "gradientType":
+            gradientTypeIndex = val;
+            break;
+        case "warpShapeType":
+            warpShapeIndex = val;
+            break;
+        case "dayTextSize":
+            day.style.fontSize = `${val}px`;
+            break;
+        case "dateTextSize":
+            date.style.fontSize = `${val}px`;
+            break;
+        case "clockTextSize":
+            clock.style.fontSize = `${val}px`;
+            break;
+        case "clockFormat":
+            clockFormat = val;
+            break;
+        case "dateFormat":
+            dateFormat = val;
+            break;
+    }
+}
+
 function preload() {
-    theShader = loadShader("./shader.vert", "./shader.frag");
+    theShader = loadShader("./assets/shader.vert", "./assets/shader.frag");
 }
 
 function setup() {
@@ -105,6 +159,8 @@ function draw() {
             rgb[j] = now[j] + (next[j] - now[j]) * completion;
         }
     }
+
+    updateTime();
 }
 
 function windowResized() {
