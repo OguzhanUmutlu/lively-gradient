@@ -75,13 +75,13 @@ function livelyPropertyListener(name, val) {
             warpShapeIndex = val;
             break;
         case "dayTextSize":
-            day.style.fontSize = `${val}px`;
+            dayDiv.style.fontSize = `${val}px`;
             break;
         case "dateTextSize":
-            date.style.fontSize = `${val}px`;
+            dateDiv.style.fontSize = `${val}px`;
             break;
         case "clockTextSize":
-            clock.style.fontSize = `${val}px`;
+            clockDiv.style.fontSize = `${val}px`;
             break;
         case "clockFormat":
             clockFormat = val;
