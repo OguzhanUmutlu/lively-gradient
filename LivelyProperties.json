@@ -84,6 +84,6 @@
     "text": "Clock Format",
     "description": "Note: 'hh:mm a' for 12-hour format, 'HH:mm' for 24-hour format",
     "type": "textbox",
-    "value": "HH:MM"
+    "value": "HH:mm"
   }
 }

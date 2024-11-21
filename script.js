@@ -44,7 +44,7 @@ let completion = 0;
 const colors = colorSchemes[0];
 
 let dateFormat = "do MMMM yyyy";
-let clockFormat = "HH:MM";
+let clockFormat = "HH:mm";
 let warpRatio = 0.4;
 let warpSize = 0.4;
 let noiseRatio = 0; // 0.08 is a fair noise, but imo no noise is good
