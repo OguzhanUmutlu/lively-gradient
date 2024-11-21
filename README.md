@@ -10,6 +10,8 @@ Shaders are sourced from https://photogradient.com/
 
 ## Installation
 
+Install Lively from [Microsoft Store](https://apps.microsoft.com/detail/9ntm2qc6qws7)
+
 Download this repository as a zip by
 clicking [this](https://github.com/OguzhanUmutlu/lively-gradient/archive/refs/heads/main.zip)
 
