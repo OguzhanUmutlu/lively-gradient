@@ -84,10 +84,18 @@ function livelyPropertyListener(name, val) {
             clockDiv.style.fontSize = `${val}px`;
             break;
         case "clockFormat":
-            clockFormat = val;
+            try {
+                dateFns.format(new Date, val);
+                clockFormat = val;
+            } catch (e) {
+            }
             break;
         case "dateFormat":
-            dateFormat = val;
+            try {
+                dateFns.format(new Date, val);
+                dateFormat = val;
+            } catch (e) {
+            }
             break;
     }
 }
