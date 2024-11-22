@@ -2,7 +2,7 @@
 
 A mesmerizing gradient effect for Lively wallpapers
 
-![](4sdtykyo.gif)
+![](rxqoin3a.png)
 
 I got this idea after seeing: https://photogradient.com/
 
